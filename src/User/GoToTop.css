@@ -1,0 +1,60 @@
+/******************************************GO TOP button from YYING6*****************************************/
+.go-top {
+	transition: .2s;
+	position: fixed;
+	bottom: 2em;
+	right: 5%;
+	text-decoration: none;
+	font-size: 12px;
+	padding: .5em;
+	display: none;
+	z-index: 2;
+}
+.go-top:hover {
+	transition: .2s;
+	background-color: #000;
+}
+.icon_user
+{
+	transition: .2s;
+	font-size: 30px;
+	/* padding: 10px 20px !important; */
+	border-radius: 50%;
+	background-color: #FFC107;
+	color: #0074d9;
+}
+.go-top:hover .icon {
+	transition: .2s;
+	color: #fff !important;
+}
+
+@media screen and (min-width:575px) {
+	.icon_user{
+		padding: 1.5px 5px !important ;
+	}
+}
+@media screen and (min-width:576px) and (max-width:677px) {
+	.icon_user{
+		padding: 10px 14px !important ;
+	}
+}
+@media screen and (min-width:678px) and (max-width:991px) {
+	.icon_user{
+		padding: 10px 14px !important ;
+	}
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+	.icon_user{
+		padding: 15px 20px !important ;
+	}
+}
+@media screen and (min-width:1200px) and (max-width:1399px){
+	.icon_user{
+		padding: 17px 23px !important ;
+	}
+}
+@media screen and (min-width:1400px){
+	.icon_user{
+		padding: 20px 25px !important ;
+	}
+}

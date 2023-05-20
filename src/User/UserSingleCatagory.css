@@ -1,0 +1,20 @@
+@media screen and (min-width:767px) {
+	.border_blog_start
+    {
+        border-left: 3px solid #0074d9;
+    }
+    .border_blog_end
+    {
+        border-right: 3px solid #0074d9;
+    }
+}
+@media screen and (max-width:767px) {
+	.border_blog_start
+    {
+        border-left: none;
+    }
+    .border_blog_end
+    {
+        border-left: none;
+    }
+}

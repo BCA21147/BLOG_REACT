@@ -1,0 +1,118 @@
+.parent
+{
+    width: auto;
+    height: 350px;
+    background-color: yellow;
+}
+.parent img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.owl-carousel
+{
+    position: relative;
+    margin-bottom: 50px;
+}
+.owl-nav
+{
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 70px;
+    color: white;
+}
+.owl-prev,.owl-next
+{
+    margin: 0px 25px !important;
+    background-color: transparent !important;
+    transition: .5s;
+}
+.owl-prev:hover,.owl-next:hover
+{
+    color: gray !important;
+}
+
+.owl-dot:nth-child(1) span 
+{
+    background-image: url(../Image/1.webp) !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.owl-dot:nth-child(2) span 
+{
+    background-image: url(../Image/2.webp) !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.owl-dot:nth-child(3) span 
+{
+    background-image: url(../Image/3.webp) !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.owl-dot:nth-child(4) span 
+{
+    background-image: url(../Image/4.webp) !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.owl-dot:nth-child(5) span 
+{
+    background-image: url(../Image/5.webp) !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.owl-dot:nth-child(6) span 
+{
+    background-image: url(../Image/6.webp) !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.owl-dot:nth-child(7) span 
+{
+    background-image: url(../Image/7.webp) !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.owl-dot:nth-child(8) span 
+{
+    background-image: url(../Image/8.webp) !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.owl-dot:nth-child(9) span 
+{
+    background-image: url(../Image/9.webp) !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.owl-dot:nth-child(10) span 
+{
+    background-image: url(../Image/10.webp) !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.owl-dots
+{
+    margin-top: 10px;
+}
+.owl-dot span
+{
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 50% !important;
+}
+.owl-dots .active span
+{
+    border: 5px solid rgb(14, 10, 236) !important;
+    box-sizing: border-box;
+}
+.owl-carousel img,.owl-dot span
+{
+    cursor: pointer !important;
+}

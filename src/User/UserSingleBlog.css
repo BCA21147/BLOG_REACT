@@ -1,0 +1,236 @@
+.pagination {
+    /* border: 5px solid red; */
+    position: relative;
+}
+
+.pagination::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pagination table {
+    position: absolute;
+    z-index: 1;
+}
+
+.pagination table a {
+    color: #fff;
+    transition: .2s;
+}
+
+.pagination table a:hover {
+    transition: .2s;
+    color: #0074d9;
+}
+
+.next_prev_btn a {
+    border: 2px solid;
+    padding: 10px 25px;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 7px;
+    transition: .3s;
+}
+
+.next_prev_btn a:hover {
+    transition: .3s;
+    background-color: #0074d9;
+    color: #fff;
+    border-color: #0074d9;
+}
+
+.heading_blog_top {
+    position: relative;
+}
+
+.heading_blog_top::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transition: .1s;
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-right: 35px solid white;
+    border-bottom: 16px solid transparent;
+    transition: .1s;
+}
+
+.first_letter_change::first-letter {
+    padding: 5px 25px;
+    background-color: #0074d9 !important;
+    font-size: 50px;
+    /* border-radius: 50%; */
+    color: #fff;
+}
+
+.first_letter_change::first-line {
+    line-height: 80px;
+}
+
+.rating i,
+.rating i:hover~i {
+    color: #222;
+    font-size: x-large;
+    text-shadow: none;
+    transition: color 200ms;
+    text-shadow: 200ms;
+    transition-delay: 0;
+    padding: 0px 6px;
+}
+.rating:hover i{
+    color: #fc0;
+    /* text-shadow: #fc0 0 0 20px; */
+}
+.rating:hover i:nth-child(2) {
+    transition-delay: 30ms;
+}
+.rating:hover i:nth-child(3) {
+    transition-delay: 60ms;
+}
+.rating:hover i:nth-child(4) {
+    transition-delay: 90ms;
+}
+.rating:hover i:nth-child(5) {
+    transition-delay: 120ms;
+}
+.rating i {
+    cursor: pointer;
+    font-style: normal;
+}
+
+/* ==================================================================================================== */
+
+#testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.testimonial-heading {
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-heading span {
+    font-size: 1.3rem;
+    color: #252525;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.testimonial-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.testimonial-box {
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.name-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-user strong {
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.name-user span {
+    color: #979797;
+    font-size: 0.8rem;
+}
+
+.reviews {
+    color: #f9d71c;
+}
+
+.box-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.client-comment p {
+    font-size: 0.9rem;
+    color: #4b4b4b;
+}
+
+.testimonial-box:hover {
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+
+@media(max-width:1060px) {
+    .testimonial-box {
+        width: 45%;
+        padding: 10px;
+    }
+}
+
+@media(max-width:790px) {
+    .testimonial-box {
+        width: 100%;
+    }
+
+    .testimonial-heading h1 {
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width:340px) {
+    .box-top {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .reviews {
+        margin-top: 10px;
+    }
+}

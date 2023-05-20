@@ -1,0 +1,25 @@
+/* *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+.border
+{
+    border: 2px solid;
+}
+.owl-carousel img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.owl-item
+{
+    height: 550px;
+}
+.owl-item .item
+{
+    height: inherit;
+}

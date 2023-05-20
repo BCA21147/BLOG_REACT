@@ -1,0 +1,29 @@
+*
+{
+    box-sizing: border-box;
+}
+.user_footer ul li a:hover,.user_footer a:hover{
+    color: #000 !important;
+    transition: .3s;
+}
+
+.col-lg-3 .text-uppercase a 
+{
+    position: relative;
+}
+.col-lg-3 .text-uppercase a::after 
+{
+    content: '';
+    width: 0%;
+    height: 8%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: .1s;
+}
+.col-lg-3 .text-uppercase a:hover::after
+{
+    transition: .1s;
+    width: 100%;
+}
