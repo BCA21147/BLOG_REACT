@@ -34,7 +34,7 @@ const LoginAdmin = () => {
                     // sessionStorage.setItem('Token',res.data.token);
                     // console.log(document.cookie.split('=')[1]);
                     if ((res.data.data).length == 1) {
-                        localStorage.setItem('Minites', 5);
+                        localStorage.setItem('Minites', 6);
                         localStorage.setItem('Second', 0);
                         localStorage.setItem('User_Data_Name', res.data.data[0].username);
                         localStorage.setItem('User_Data_Email', res.data.data[0].email);
