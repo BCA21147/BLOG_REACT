@@ -50,7 +50,7 @@ const HeaderAdmin = (value) => {
                             <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i className="fas fa-bars" /></a>
                         </li>
                         <li className="nav-item d-none d-sm-inline-block">
-                            <a href="#" className="nav-link">Home</a>
+                            <a href="/" className="nav-link">Home</a>
                         </li>
                         <li className="nav-item d-none d-sm-inline-block">
                             <a href="#" className="btn btn-primary" onClick={setDefaultDB}>Set Default DataBase</a>
