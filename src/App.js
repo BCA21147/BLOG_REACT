@@ -24,8 +24,9 @@ import { setSecond_Value } from './Counter/CounterSlice_1';
 
 function App() {
 
-  const dispatch = useDispatch();
-
+  const dispatch = useDispatch();  
+  const nav = useNavigate();
+  
   useEffect(() => {
 
     const interval = setInterval(() => {
@@ -37,15 +38,16 @@ function App() {
       if (localStorage.getItem('Minites') >= 0 && localStorage.getItem('Second') > 0) {
         localStorage.setItem('Second', localStorage.getItem('Second') - 1);
       }
-
+      if (localStorage.getItem('Minites') == 0 && localStorage.getItem('Second') == 0) {
+        nav('/admin');
+      }
+      
       dispatch(setMinutes_Value());
       dispatch(setSecond_Value());
 
     }, 1000)
     return () => clearInterval(interval);
   }, [])
-
-  const nav = useNavigate();
 
   const VerifyToken = () => {
     axios.get('https://cute-gray-ant-suit.cyclic.app/admin/get_admin', {
