@@ -75,7 +75,7 @@ function Slid() {
                         })
                     }
                 </ol>
-                <div className="carousel-inner" style={{ height: "75vh" }}>
+                <div className="carousel-inner">
                     {
                         silder_data.map((val, i) => {
                             return (
