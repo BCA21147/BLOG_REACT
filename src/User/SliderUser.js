@@ -2,6 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
+import './UserSlider.css';
 
 function Slid() {
 
