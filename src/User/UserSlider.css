@@ -1,0 +1,30 @@
+@media screen and (min-width:575px) {
+	.carousel-inner{
+		height: 55vh !important;
+	}
+}
+@media screen and (min-width:576px) and (max-width:677px) {
+	.carousel-inner{
+		height: 55vh !important;
+	}
+}
+@media screen and (min-width:678px) and (max-width:991px) {
+	.carousel-inner{
+		height: 65vh !important;
+	}
+}
+@media screen and (min-width:992px) and (max-width:1199px) {
+	.carousel-inner{
+		height: 75vh !important;
+	}
+}
+@media screen and (min-width:1200px) and (max-width:1399px){
+	.carousel-inner{
+		height: 75vh !important;
+	}
+}
+@media screen and (min-width:1400px){
+	.carousel-inner{
+		height: 75vh !important;
+	}
+}
