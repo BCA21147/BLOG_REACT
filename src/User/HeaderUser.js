@@ -9,7 +9,7 @@ const HeaderUser = () => {
     const [header_data, setheader_data] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/get_all_catagory')
+        axios.get('https://cute-gray-ant-suit.cyclic.app/get_all_catagory')
             .then((res) => { console.log(res.data.data); setheader_data(res.data.data) })
             .catch((err) => { console.log("Data Not Found."); })
     }, [])

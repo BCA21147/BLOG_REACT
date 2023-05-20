@@ -13,7 +13,7 @@ const EditBlog = () => {
     const [option, setoption] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/admin/get_catagory', {
+        axios.get('https://cute-gray-ant-suit.cyclic.app/admin/get_catagory', {
             headers: {
                 Authorization: document.cookie.split('=')[1]
             }
@@ -33,7 +33,7 @@ const EditBlog = () => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/admin/get_single_blog/${id}`, {
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/get_single_blog/${id}`, {
             headers: {
                 Authorization: document.cookie.split('=')[1]
             }
@@ -89,7 +89,7 @@ const EditBlog = () => {
     }
     const submitData = (e) => {
         e.preventDefault();
-        axios.post(`http://localhost:5000/admin/update_blog/${id}`,
+        axios.post(`https://cute-gray-ant-suit.cyclic.app/admin/update_blog/${id}`,
             {
                 title: title,
                 image: image,

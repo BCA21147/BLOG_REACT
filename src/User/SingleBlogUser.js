@@ -23,22 +23,22 @@ const SingleBlogUser = () => {
     var none_star = {};
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/get_catagory_id/${blog}`)
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/get_catagory_id/${blog}`)
             .then((res) => { console.log(res.data.data); setfindCatId(res.data.data[0]._id) })
             .catch((err) => { console.log("Data Not Found."); })
-        axios.get(`http://localhost:5000/get_top_5_blog`)
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/get_top_5_blog`)
             .then((res) => { console.log(res.data.data); settop5_data(res.data.data) })
             .catch((err) => { console.log("Data Not Found."); })
-        axios.get(`http://localhost:5000/get_latest_5_blog`)
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/get_latest_5_blog`)
             .then((res) => { console.log(res.data.data); setlast5_data(res.data.data) })
             .catch((err) => { console.log("Data Not Found."); })
-        axios.get(`http://localhost:5000/get_comment`)
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/get_comment`)
             .then((res) => { console.log(res.data.data); setcomment_data(res.data.data) })
             .catch((err) => { console.log("Data Not Found."); })
-        axios.get(`http://localhost:5000/get_all_blog`)
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/get_all_blog`)
             .then((res) => { console.log(res.data.data); setblog_data(res.data.data) })
             .catch((err) => { console.log("Data Not Found."); })
-        axios.get(`http://localhost:5000/get_single_blog/${blog}`)
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/get_single_blog/${blog}`)
             .then((res) => {
                 console.log(res.data.data); setcatagory_data(res.data.data[0])
             })
@@ -78,7 +78,7 @@ const SingleBlogUser = () => {
     }
 
     const nextBtn = () => {
-        axios.get(`http://localhost:5000/single_blog/next_btn/${blog}`)
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/single_blog/next_btn/${blog}`)
             .then((res) => {
                 console.log(res.data.data);
                 nav(`/Single_Blog/Next_Page/${res.data.data}`);
@@ -87,7 +87,7 @@ const SingleBlogUser = () => {
             .catch((err) => { console.log("Data Not Found."); })
     }
     const prevBtn = () => {
-        axios.get(`http://localhost:5000/single_blog/prev_btn/${blog}`)
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/single_blog/prev_btn/${blog}`)
             .then((res) => {
                 console.log(res.data.data);
                 nav(`/Single_Blog/Prev_Page/${res.data.data}`);
@@ -103,7 +103,7 @@ const SingleBlogUser = () => {
 
     const formSubmit = (e) => {
         if (username != '' && email != '' && message != '') {
-            axios.post(`http://localhost:5000/add_comment/${catagory_data._id}`, {
+            axios.post(`https://cute-gray-ant-suit.cyclic.app/add_comment/${catagory_data._id}`, {
                 name: username,
                 email: email,
                 message: message,

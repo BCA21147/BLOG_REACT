@@ -7,10 +7,10 @@ const FooterUser = () => {
     const [footer_data, setfooter_data] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/get_all_blog')
+        axios.get('https://cute-gray-ant-suit.cyclic.app/get_all_blog')
             .then((res) => { console.log(res.data.data); setfooter_data(res.data.data) })
             .catch((err) => { console.log("Data Not Found."); })
-        axios.get('http://localhost:5000/get_all_catagory')
+        axios.get('https://cute-gray-ant-suit.cyclic.app/get_all_catagory')
             .then((res) => { console.log(res.data.data); setheader_data(res.data.data) })
             .catch((err) => { console.log("Data Not Found."); })
     }, [])

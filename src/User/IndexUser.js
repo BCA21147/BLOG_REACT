@@ -13,14 +13,14 @@ const IndexUser = () => {
   const [search, setsearch] = useState('');
 
   const getData = () => {
-    axios.get('http://localhost:5000/get_all_catagory')
+    axios.get('https://cute-gray-ant-suit.cyclic.app/get_all_catagory')
       .then((res) => { console.log(res.data.data); setcatagory_data(res.data.data) })
       .catch((err) => { console.log("Data Not Found."); })
   }
 
   useEffect(() => {
     getData();
-    axios.get('http://localhost:5000/get_all_blog')
+    axios.get('https://cute-gray-ant-suit.cyclic.app/get_all_blog')
       .then((res) => { console.log(res.data.data); setblog_data(res.data.data) })
       .catch((err) => { console.log("Data Not Found."); })
   }, [])
@@ -30,7 +30,7 @@ const IndexUser = () => {
       getData();
     }
     else {
-      axios.get(`http://localhost:5000/search_catagory/${e.target.value}`)
+      axios.get(`https://cute-gray-ant-suit.cyclic.app/search_catagory/${e.target.value}`)
         .then((res) => {
           setcatagory_data(res.data.data)
         })
@@ -78,7 +78,7 @@ const IndexUser = () => {
                 return (
                   <div className="col-sm-12 col-md-6 col-lg-4 p-3" key={i}>
                     <div className="card p-3 h-100">
-                      <a href={`/Single_Catagory/${val._id}`}><img src={val.image} alt={val.catagory} srcset="" className='rounded' className="w-100" /></a>
+                      <a href={`/Single_Catagory/${val._id}`}><img src={val.image} alt={val.catagory} srcset="" className='rounded w-100' /></a>
                       <div className="h5 pt-3 text-center text-capitalize"><a href={`/Single_Catagory/${val._id}`} className='text-dark'>{val.catagory}</a></div>
                       <div className="h4 text-center text-warning">
                         {

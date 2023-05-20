@@ -62,7 +62,7 @@ const AddCatagory = () => {
         // console.log(Imagefile);
         console.log(Imagefile);
 
-        axios.post('http://localhost:5000/admin/add_catagory',
+        axios.post('https://cute-gray-ant-suit.cyclic.app/admin/add_catagory',
             {
                 catagory: catagory,
                 image: image,

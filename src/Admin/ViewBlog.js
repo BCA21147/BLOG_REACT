@@ -11,7 +11,7 @@ const ViewBlog = () => {
     const [data, setdata] = useState([]);
 
     const getData = () => {
-        axios.get('http://localhost:5000/admin/get_blog', {
+        axios.get('https://cute-gray-ant-suit.cyclic.app/admin/get_blog', {
             headers: {
                 Authorization: document.cookie.split('=')[1]
             }
@@ -32,7 +32,7 @@ const ViewBlog = () => {
     const changeStatus = (e) => {
         // console.log(e.target.value);
         // console.log(e.target.id);
-        axios.get(`http://localhost:5000/admin/update_status_blog/${e.target.id}/${e.target.value}`, {
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/update_status_blog/${e.target.id}/${e.target.value}`, {
             headers: {
                 Authorization: document.cookie.split('=')[1]
             }
@@ -47,7 +47,7 @@ const ViewBlog = () => {
     const deleteBlog = (e) => {
         var confirmData = window.confirm('Are you sure you can DELETE it ..!');
         if (confirmData) {
-            axios.get(`http://localhost:5000/admin/delete_blog/${e.target.id}`, {
+            axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/delete_blog/${e.target.id}`, {
                 headers: {
                     Authorization: document.cookie.split('=')[1]
                 }
@@ -69,7 +69,7 @@ const ViewBlog = () => {
             getData();
         }
         else {
-            axios.get(`http://localhost:5000/admin/search_blog/${e.target.value}`, {
+            axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/search_blog/${e.target.value}`, {
                 headers: {
                     Authorization: document.cookie.split('=')[1]
                 }

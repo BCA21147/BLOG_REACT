@@ -21,7 +21,7 @@ const LoginAdmin = () => {
         e.preventDefault();
 
         if (email != '' && password != '') {
-            axios.post('http://localhost:5000/admin/check_admin', {
+            axios.post('https://cute-gray-ant-suit.cyclic.app/admin/check_admin', {
                 email: email,
                 password: password
             })

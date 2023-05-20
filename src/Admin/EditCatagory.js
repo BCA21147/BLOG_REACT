@@ -16,7 +16,7 @@ const EditCatagory = () => {
     const [Imagepath, setpath] = useState('');
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/admin/get_single_catagory/${id}`, {
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/get_single_catagory/${id}`, {
             headers: {
                 Authorization: document.cookie.split('=')[1]
             }
@@ -74,7 +74,7 @@ const EditCatagory = () => {
 
     const submitData = (e) => {
         e.preventDefault();
-        axios.post(`http://localhost:5000/admin/update_catagory/${id}`, {
+        axios.post(`https://cute-gray-ant-suit.cyclic.app/admin/update_catagory/${id}`, {
             catagory: catagory,
             image: image,
             Imagefile

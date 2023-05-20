@@ -15,7 +15,7 @@ const HeaderAdmin = (value) => {
     const setDefaultDB = () => {
 
         if (window.confirm('Are You Sure...?\n\nYou Can Change DataBase...!')) {
-            axios.get('http://localhost:5000/admin/setDefaultDB', {
+            axios.get('https://cute-gray-ant-suit.cyclic.app/admin/setDefaultDB', {
                 headers: {
                     Authorization: document.cookie.split('=')[1]
                 }

@@ -48,7 +48,7 @@ function App() {
   const nav = useNavigate();
 
   const VerifyToken = () => {
-    axios.get('http://localhost:5000/admin/get_admin', {
+    axios.get('https://cute-gray-ant-suit.cyclic.app/admin/get_admin', {
       headers: {
         // Authorization:sessionStorage.getItem('Token')
         Authorization: document.cookie.split('=')[1]

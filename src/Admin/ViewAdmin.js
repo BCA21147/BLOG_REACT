@@ -13,7 +13,7 @@ const ViewAdmin = () => {
     const [cookies, setCookie] = useCookies('');
 
     const getData = () => {
-        axios.get('http://localhost:5000/admin/get_admin', {
+        axios.get('https://cute-gray-ant-suit.cyclic.app/admin/get_admin', {
             headers: {
                 Authorization: document.cookie.split('=')[1]
             }
@@ -34,7 +34,7 @@ const ViewAdmin = () => {
     const changeStatus = (e) => {
         // console.log(e.target.value);
         // console.log(e.target.id);
-        axios.get(`http://localhost:5000/admin/update_status_admin/${e.target.id}/${e.target.value}`, {
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/update_status_admin/${e.target.id}/${e.target.value}`, {
             headers: {
                 Authorization: document.cookie.split('=')[1]
             }
@@ -50,7 +50,7 @@ const ViewAdmin = () => {
     const deleteAdmin = (e) => {
         var confirmData = window.confirm('Are you sure you can DELETE it ..!');
         if (confirmData) {
-            axios.get(`http://localhost:5000/admin/delete_admin/${e.target.id}`, {
+            axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/delete_admin/${e.target.id}`, {
                 headers: {
                     Authorization: document.cookie.split('=')[1]
                 }
@@ -72,7 +72,7 @@ const ViewAdmin = () => {
             getData();
         }
         else {
-            axios.get(`http://localhost:5000/admin/search_admin/${e.target.value}`, {
+            axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/search_admin/${e.target.value}`, {
                 headers: {
                     Authorization: document.cookie.split('=')[1]
                 }

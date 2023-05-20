@@ -22,7 +22,7 @@ const AddAdmin = () => {
     const submitData = (e) => {
         e.preventDefault();
         if (pass == cpass) {
-            axios.post('http://localhost:5000/admin/add_admin', {
+            axios.post('https://cute-gray-ant-suit.cyclic.app/admin/add_admin', {
                 name: name,
                 email: email,
                 password: pass,

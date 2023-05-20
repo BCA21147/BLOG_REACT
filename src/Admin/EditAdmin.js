@@ -16,7 +16,7 @@ const EditAdmin = () => {
     const [cpass, setcpass] = useState('');
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/admin/get_single_admin/${id}`, {
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/get_single_admin/${id}`, {
             headers: {
                 Authorization: document.cookie.split('=')[1]
             }
@@ -35,7 +35,7 @@ const EditAdmin = () => {
     const submitData = (e) => {
         e.preventDefault();
         if (pass == cpass) {
-            axios.post(`http://localhost:5000/admin/update_admin/${id}`,
+            axios.post(`https://cute-gray-ant-suit.cyclic.app/admin/update_admin/${id}`,
                 {
                     name: name,
                     email: email,

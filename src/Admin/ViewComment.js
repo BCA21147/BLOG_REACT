@@ -12,7 +12,7 @@ const ViewComment = () => {
     const [data, setdata] = useState([]);
 
     const getData = () => {
-        axios.get('http://localhost:5000/admin/get_comment', {
+        axios.get('https://cute-gray-ant-suit.cyclic.app/admin/get_comment', {
             headers: {
                 Authorization: document.cookie.split('=')[1]
             }
@@ -33,7 +33,7 @@ const ViewComment = () => {
     const changeStatus = (e) => {
         // console.log(e.target.value);
         // console.log(e.target.id);
-        axios.get(`http://localhost:5000/admin/update_status_comment/${e.target.id}/${e.target.value}`, {
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/update_status_comment/${e.target.id}/${e.target.value}`, {
             headers: {
                 Authorization: document.cookie.split('=')[1]
             }
@@ -48,7 +48,7 @@ const ViewComment = () => {
     const deleteComment = (e) => {
         var confirmData = window.confirm('Are you sure you can DELETE it ..!');
         if (confirmData) {
-            axios.get(`http://localhost:5000/admin/delete_comment/${e.target.id}`, {
+            axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/delete_comment/${e.target.id}`, {
                 headers: {
                     Authorization: document.cookie.split('=')[1]
                 }
@@ -67,7 +67,7 @@ const ViewComment = () => {
             getData();
         }
         else {
-            axios.get(`http://localhost:5000/admin/search_comment/${e.target.value}`, {
+            axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/search_comment/${e.target.value}`, {
                 headers: {
                     Authorization: document.cookie.split('=')[1]
                 }

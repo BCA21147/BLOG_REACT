@@ -21,7 +21,7 @@ const SingleCatagoryUser = () => {
     var none_star = {};
 
     const getData = () => {
-        axios.get(`http://localhost:5000/get_single_catagory/${catagory}`)
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/get_single_catagory/${catagory}`)
             .then((res) => {
                 console.log(res.data.data);
                 setcatagory_data(res.data.data);
@@ -32,10 +32,10 @@ const SingleCatagoryUser = () => {
 
     useEffect(() => {
         getData();
-        axios.get(`http://localhost:5000/get_all_blog`)
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/get_all_blog`)
             .then((res) => { console.log(res.data.data); setblog_data(res.data.data) })
             .catch((err) => { console.log("Data Not Found."); })
-        axios.get('http://localhost:5000/get_all_catagory')
+        axios.get('https://cute-gray-ant-suit.cyclic.app/get_all_catagory')
             .then((res) => {
                 console.log(res.data.data);
                 for (let i = 0; i < res.data.data.length; i++) {
@@ -53,7 +53,7 @@ const SingleCatagoryUser = () => {
             getData();
         }
         else {
-            axios.get(`http://localhost:5000/search_blog/${catagory}/${e.target.value}`)
+            axios.get(`https://cute-gray-ant-suit.cyclic.app/search_blog/${catagory}/${e.target.value}`)
                 .then((res) => {
                     setcatagory_data(res.data.data)
                 })

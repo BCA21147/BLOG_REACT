@@ -11,7 +11,7 @@ const ViewCatagory = () => {
     const [data, setdata] = useState([]);
 
     const getData = () => {
-        axios.get('http://localhost:5000/admin/get_catagory', {
+        axios.get('https://cute-gray-ant-suit.cyclic.app/admin/get_catagory', {
             headers: {
                 Authorization: document.cookie.split('=')[1]
             }
@@ -32,7 +32,7 @@ const ViewCatagory = () => {
     const changeStatus = (e) => {
         // console.log(e.target.value);
         // console.log(e.target.id);
-        axios.get(`http://localhost:5000/admin/update_status_catagory/${e.target.id}/${e.target.value}`, {
+        axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/update_status_catagory/${e.target.id}/${e.target.value}`, {
             headers: {
                 Authorization: document.cookie.split('=')[1]
             }
@@ -47,7 +47,7 @@ const ViewCatagory = () => {
     const deleteCatagory = (e) => {
         var confirmData = window.confirm('Are you sure you can DELETE it ..! \n\n Note :- This Catagory Releted All Blog Must Be DELETED.');
         if (confirmData) {
-            axios.get(`http://localhost:5000/admin/delete_catagory/${e.target.id}`, {
+            axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/delete_catagory/${e.target.id}`, {
                 headers: {
                     Authorization: document.cookie.split('=')[1]
                 }
@@ -69,7 +69,7 @@ const ViewCatagory = () => {
             getData();
         }
         else {
-            axios.get(`http://localhost:5000/admin/search_catagory/${e.target.value}`, {
+            axios.get(`https://cute-gray-ant-suit.cyclic.app/admin/search_catagory/${e.target.value}`, {
                 headers: {
                     Authorization: document.cookie.split('=')[1]
                 }
